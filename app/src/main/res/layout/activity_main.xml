@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/white"
+        app:titleTextColor="@color/white"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        android:text="Powered by"
+        android:textIsSelectable="true"
+        app:layout_constraintBottom_toTopOf="@id/list_pokemon_fragment"
+        android:fontFamily="sans-serif"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="120dp"
+        android:id="@+id/txt1"
+        android:textSize="15sp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        android:text="•Pokemon•"
+        app:layout_constraintStart_toEndOf="@id/txt1"
+        android:id="@+id/title_txt"
+        android:textIsSelectable="true"
+        android:layout_marginStart="5dp"
+        app:layout_constraintBottom_toTopOf="@id/list_pokemon_fragment"
+        android:fontFamily="cursive"
+        android:textSize="22sp"
+        android:textColor="@color/purple_500"/>
+
+    <fragment
+        android:id="@+id/list_pokemon_fragment"
+        android:layout_marginTop="120dp"
+        android:name="com.christopher.pokemonuisample.PokemonList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
